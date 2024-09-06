@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+## Funktionalitet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* Det går att skapa konto och logga in.
+* Det går att skapa ett quiz.
+* Det går att lägga till frågor på ett skapat quiz och placera ut frågorna på en karta (Leaflet).
+  - En fråga innehåller: Frågan, svaret samt koordinater på kartan (longitud och latitud).
+* Det går att se alla quiz, vad quiz:et heter samt vem som skapat det.
+* Det går att välja ett quiz och se alla frågor på kartan (det ska dock inte gå och spela quizet alltså svara på frågorna).
+* Det går att se vad du befinner dig på kartan (ej i realtid).
+* Det ska enbart behövas loggas in för skapa quiz och lägga till frågor.
 
-Currently, two official plugins are available:
+## Betygskriterier
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**För att få Godkänt ska du:**
+* Använt dig av **Geolocation API**.
+* Använt dig av JSON Web Token (JWT).
+* Använt dig av Leaflet JS - karta. (Annan karta är godkänd också)
+* Appen är gjord i React och använder sig av det API som följer med examinationen.
+* Uppfyller alla krav på funktionalitet.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**För att Väl Godkänt ska du:**
+* Allt i godkänt.
+* Kunna ta bort ett quiz som man själv skapat.
+* Appen är gjord i React + Typescript.
